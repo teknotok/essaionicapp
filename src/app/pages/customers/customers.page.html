@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Customers Page</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Animated Searchbar -->
+  <ion-searchbar animated placeholder="Ara"></ion-searchbar>
+  <!--List-->
+  <ion-list>
+    <ion-item *ngFor="let item of lastCustomersData">
+      <ion-label>
+        <h1>{{item.name}}</h1>
+        <h2>{{item.imei}}</h2>
+      </ion-label>
+      <ion-label>
+        <h3>{{item.marka}} / {{item.model}}</h3>
+        <span *ngIf="item.teslimat"><ion-icon name="ribbon"></ion-icon></span
+        >{{' '}}<span>{{item.date}}</span>
+      </ion-label>
+      <ion-avatar slot="start">
+        <img [src]="item.avatar" />
+      </ion-avatar>
+    </ion-item>
+  </ion-list>
+</ion-content>

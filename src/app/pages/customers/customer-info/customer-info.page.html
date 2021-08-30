@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Customers {{customerInfoDetails.id}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!--List-->
+  <ion-list>
+    <ion-item>
+      <ion-label>
+        <h1>{{customerInfoDetails.name}}</h1>
+        <h2>{{customerInfoDetails.imei}}</h2>
+      </ion-label>
+      <ion-label>
+        <h3>{{customerInfoDetails.marka}} / {{customerInfoDetails.model}}</h3>
+        <span *ngIf="customerInfoDetails.teslimat"><ion-icon name="ribbon"></ion-icon></span
+        >{{' '}}<span>{{customerInfoDetails.date}}</span>
+      </ion-label>
+      <ion-avatar slot="start">
+        <img [src]="customerInfoDetails.avatar" />
+      </ion-avatar>
+    </ion-item>
+  </ion-list>
+</ion-content>
