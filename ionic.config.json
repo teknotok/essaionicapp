@@ -1,0 +1,7 @@
+{
+  "name": "essaionicapp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
