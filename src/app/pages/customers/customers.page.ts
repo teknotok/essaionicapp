@@ -8,7 +8,8 @@ import { Customer } from './customer.modul';
   styleUrls: ['./customers.page.scss'],
 })
 export class CustomersPage implements OnInit {
-  lastCustomersData:Customer[];
+  lastCustomersData: Customer[];
+  afterDeleteCustomersData:Customer[];
   constructor(private cusService: CustomersService) {
   }
 

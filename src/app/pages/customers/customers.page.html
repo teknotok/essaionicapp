@@ -9,7 +9,9 @@
   <ion-searchbar animated placeholder="Ara"></ion-searchbar>
   <!--List-->
   <ion-list>
-    <ion-item *ngFor="let item of lastCustomersData">
+    <ion-item *ngFor="let item of lastCustomersData"
+    [routerLink]="['/customers',item.id]"
+    >
       <ion-label>
         <h1>{{item.name}}</h1>
         <h2>{{item.imei}}</h2>
@@ -20,7 +22,7 @@
         >{{' '}}<span>{{item.date}}</span>
       </ion-label>
       <ion-avatar slot="start">
-        <img [src]="item.avatar" />
+        <ion-img [src]="item.avatar" ></ion-img>
       </ion-avatar>
     </ion-item>
   </ion-list>

@@ -83,14 +83,19 @@ export class CustomersService {
   ]
   constructor() { }
 
-  getAllCustomers(){
+  getAllCustomers() {
     return [...this.customersData]
   }
 
-  getCustomerInfo(customerId: number|string){
+  getCustomerInfo(customerId: number | string) {
     return {
       ...this.customersData.find(item => item.id == customerId)
     }
+  }
+  
+  deleteItemCustomerService(id: number | string) {
+    this.customersData = this.customersData.filter(item => item.id != id) 
+    console.log(this.customersData)
   }
 
 }

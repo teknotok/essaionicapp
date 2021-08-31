@@ -1,5 +1,13 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start" >
+      <ion-back-button text="Back"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end" (click)="deleteItem()">
+      <ion-button color="danger" >
+        <ion-icon name="trash"></ion-icon>
+      </ion-button>
+    </ion-buttons>
     <ion-title>Customers {{customerInfoDetails.id}}</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -14,7 +22,8 @@
       </ion-label>
       <ion-label>
         <h3>{{customerInfoDetails.marka}} / {{customerInfoDetails.model}}</h3>
-        <span *ngIf="customerInfoDetails.teslimat"><ion-icon name="ribbon"></ion-icon></span
+        <span *ngIf="customerInfoDetails.teslimat"
+          ><ion-icon name="ribbon"></ion-icon></span
         >{{' '}}<span>{{customerInfoDetails.date}}</span>
       </ion-label>
       <ion-avatar slot="start">
